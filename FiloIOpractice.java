@@ -33,7 +33,27 @@ public class FiloIOpractice {
                 e.printStackTrace();
             }
 
+        // Open a CSV file using the split() method on a string object
+        String path = "C:\\Users\\BE218\\Desktop\\JavaFiles\\arrivingAnimals.txt";
+        String myFileLine = "";
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(path));
+            while ((myFileLine = reader.readLine()) != null) {
+                String[] myArray = myFileLine.split(",");
+                System.out.println("First item: " + myArray[0]);
+                System.out.println("Second item: " + myArray[1]);
+                System.out.println("Third item: " + myArray[2]);
+                System.out.println("Fourth item: " + myArray[3]);
+                System.out.println("Fifth item: " + myArray[4]);
+                System.out.println("Sixth item: " + myArray[5]);
+            }
+        }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
+
 
         }
-    }
+
 
